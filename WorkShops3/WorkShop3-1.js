@@ -9,11 +9,9 @@ if ( score <=80){
 if (score <= 70){
     grade = "C";
 }
-
 if (score <= 60){
     grade = "D";
 }
-
 if (score < 50){
     grade = "F";
 }
