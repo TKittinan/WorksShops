@@ -2,7 +2,6 @@
 
 import UserProfileCard from "./components/UserProfileCard";
 
-// ---- เก็บข้อมูลผู้ใช้หลายคน ----
 const users = [
   {
     id: 1,

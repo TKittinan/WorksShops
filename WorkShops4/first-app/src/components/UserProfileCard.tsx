@@ -25,7 +25,6 @@ const UserProfileCard: React.FC<UserProfileCardProps> = ({ user, onViewDetails }
       maxWidth: "300px",
       marginBottom: "16px",
     }}>
-      {/* รูปโปรไฟล์ + ข้อมูล */}
       <div style={{ display: "flex", alignItems: "center", marginBottom: "12px" }}>
         <img
           src={user.avatarUrl || "https://via.placeholder.com/80"}
@@ -47,8 +46,6 @@ const UserProfileCard: React.FC<UserProfileCardProps> = ({ user, onViewDetails }
           </div>
         </div>
       </div>
-
-      {/* Skills */}
       <div style={{ marginBottom: "12px" }}>
         <div style={{ fontSize: "13px", fontWeight: "bold", marginBottom: "4px" }}>ทักษะ:</div>
         <div>
@@ -57,8 +54,6 @@ const UserProfileCard: React.FC<UserProfileCardProps> = ({ user, onViewDetails }
           ))}
         </div>
       </div>
-
-      {/* ปุ่มดูรายละเอียด */}
       <button
         onClick={() => onViewDetails(user.id)}
         style={{

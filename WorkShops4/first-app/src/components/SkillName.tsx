@@ -21,14 +21,14 @@ const SkillName: React.FC<SkillNameProps> = ({ name, level }) => {
   };
 
   if (level === "Beginner") {
-    style.backgroundColor = "#bbf7d0"; // เขียวอ่อน
-    style.color = "#166534";            // เขียวเข้ม
+    style.backgroundColor = "#bbf7d0";
+    style.color = "#166534";
   } else if (level === "Intermediate") {
-    style.backgroundColor = "#fef08a"; // เหลืองอ่อน
-    style.color = "#854d0e";            // เหลืองเข้ม
+    style.backgroundColor = "#fef08a";
+    style.color = "#854d0e";
   } else if (level === "Advanced") {
-    style.backgroundColor = "#fecaca"; // แดงอ่อน
-    style.color = "#991b1b";            // แดงเข้ม
+    style.backgroundColor = "#fecaca";
+    style.color = "#991b1b";
   }
 
   return <span style={style}>{name} {level && `(${level})`}</span>;
