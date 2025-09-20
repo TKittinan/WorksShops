@@ -20,15 +20,21 @@ function App() {
       imageUrl:
         "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121032-iphone-16-pro-max.png",
       title: "iPhone 16 Pro Max Black Titanium",
-      description: "เรือธงสุดล้ำของ Apple สีดำสุดพรีเมียม",
+      description: ["ขุมพลังแห่งชิป A18 PRO",
+                    "จอภาพ Super Retina XDR ขนาด 6.9 นิ้ว",
+                    "กล้อง Fusion 48MP และไมโครโฟนคุณภาพระดับสตูดิโอ"],
       price: 1499.99,
     },
     {
       id: 3,
-      imageUrl:
-        "https://media-cdn.bnn.in.th/473058/msi-notebook-titan-18-hx-dragon-edition-norse-myth-a2xwjg-286th-black-1-square_medium.jpg",
+      imageUrl: "https://media-cdn.bnn.in.th/473058/msi-notebook-titan.jpg",
       title: "Notebook Gaming ระดับไฮเอนด์",
-      description: "โน๊ตบุ๊คเกมมิ่งสเปกสุดโหดราคาสูงมาก",
+                description: [
+            "CPU: Intel Core Ultra 9 285HX, up to 5.5GHz, 24C(8P+16E)/24T, 36MB",
+            "Graphics: NVIDIA GeForce RTX 5090 24GB GDDR7",
+            "RAM: 96GB (2x48GB) DDR5-6400",
+            "SSD: 2TB NVMe PCIe 5.0 x 4 + 4TB (2x2TB) NVMe PCIe 4.0 x 4"
+          ],
       price: 899999.99,
     },
   ];
@@ -36,7 +42,6 @@ function App() {
   return (
     <div className="app-container">
       <h1 className="app-title">รายการสินค้าของเรา</h1>
-
       <div className="product-grid">
         {products.map((p) => (
           <ProductCard
