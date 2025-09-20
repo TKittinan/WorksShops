@@ -10,26 +10,26 @@ function App() {
     {
       id: 1,
       imageUrl:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/640px-A_small_cup_of_coffee.JPG",
-      title: "สินค้าพิเศษ 1",
-      description: "สินค้าที่มีคุณภาพสูง เหมาะสำหรับทุกการใช้งาน",
-      price: 29.99,
+        "https://cf.autodeft2.pw/content/20240116/https-wwwcarscoopscom-wp-content-uploads-2024-01-2024-honda-civic-rs-prototype-1-1024x683-b4glCx.jpg",
+      title: "Nissan GTR R35",
+      description: "รถสปอร์ตแรงระดับซูเปอร์คาร์ ดีไซน์โฉบเฉี่ยว",
+      price: 299999.99,
     },
     {
       id: 2,
       imageUrl:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/IPhone_12_Pro_Gold.svg/1200px-IPhone_12_Pro_Gold.svg.png",
-      title: "สินค้าพิเศษ 2",
-      description: "โทรศัพท์มือถือสมาร์ทโฟนทันสมัย ใช้งานได้ลื่นไหล",
-      price: 79.5,
+        "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121032-iphone-16-pro-max.png",
+      title: "iPhone 16 Pro Max Black Titanium",
+      description: "เรือธงสุดล้ำของ Apple สีดำสุดพรีเมียม",
+      price: 1499.99,
     },
     {
       id: 3,
       imageUrl:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Computer_mouse_icon.svg/1024px-Computer_mouse_icon.svg.png",
-      title: "สินค้าพิเศษ 3",
-      description: "เมาส์เกมมิ่งคุณภาพสูง ดีไซน์สวยงาม ใช้งานสะดวก",
-      price: 33.33,
+        "https://media-cdn.bnn.in.th/473058/msi-notebook-titan-18-hx-dragon-edition-norse-myth-a2xwjg-286th-black-1-square_medium.jpg",
+      title: "Notebook Gaming ระดับไฮเอนด์",
+      description: "โน๊ตบุ๊คเกมมิ่งสเปกสุดโหดราคาสูงมาก",
+      price: 899999.99,
     },
   ];
 
