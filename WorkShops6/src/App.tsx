@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import ProductCard from "./ProductCard";
 
 function App() {
-  const [count, setCount] = useState(0)
+  function addToCart(name: string) {
+    alert(name + " ถูกเพิ่มลงในตะกร้าแล้ว!");
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="p-6 flex flex-wrap gap-4">
+      <ProductCard
+        imageUrl="https://picsum.photos/200/150"
+        title="สินค้า A"
+        description="รายละเอียดของสินค้า A"
+        price={100}
+        onAddToCart={() => addToCart("สินค้า A")}
+      />
+
+      <ProductCard
+        imageUrl="https://picsum.photos/200/151"
+        title="สินค้า B"
+        description="รายละเอียดของสินค้า B"
+        price={200}
+        onAddToCart={() => addToCart("สินค้า B")}
+      />
+
+      <ProductCard
+        imageUrl="https://picsum.photos/200/152"
+        title="สินค้า C"
+        description="รายละเอียดของสินค้า C"
+        price={300}
+        onAddToCart={() => addToCart("สินค้า C")}
+      />
+    </div>
+  );
 }
 
-export default App
+export default App;
