@@ -1,36 +1,54 @@
+import "./App.css";
 import ProductCard from "./component/ProductCard";
 
-
 function App() {
-  function addToCart(name: string) {
-    alert(name + " ถูกเพิ่มลงในตะกร้าแล้ว!");
-  }
+  const handleAddToCart = (product: string) => {
+    alert(`${product} ถูกเพิ่มในตะกร้าแล้ว!`);
+  };
+
+  const products = [
+    {
+      id: 1,
+      imageUrl:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/640px-A_small_cup_of_coffee.JPG",
+      title: "สินค้าพิเศษ 1",
+      description: "สินค้าที่มีคุณภาพสูง เหมาะสำหรับทุกการใช้งาน",
+      price: 29.99,
+    },
+    {
+      id: 2,
+      imageUrl:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/IPhone_12_Pro_Gold.svg/1200px-IPhone_12_Pro_Gold.svg.png",
+      title: "สินค้าพิเศษ 2",
+      description: "โทรศัพท์มือถือสมาร์ทโฟนทันสมัย ใช้งานได้ลื่นไหล",
+      price: 79.5,
+    },
+    {
+      id: 3,
+      imageUrl:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Computer_mouse_icon.svg/1024px-Computer_mouse_icon.svg.png",
+      title: "สินค้าพิเศษ 3",
+      description: "เมาส์เกมมิ่งคุณภาพสูง ดีไซน์สวยงาม ใช้งานสะดวก",
+      price: 33.33,
+    },
+  ];
 
   return (
-    <div className="p-6 flex flex-wrap gap-4">
-      <ProductCard
-        imageUrl="https://picsum.photos/200/150"
-        title="สินค้า A"
-        description="รายละเอียดของสินค้า A"
-        price={100}
-        onAddToCart={() => addToCart("สินค้า A")}
-      />
+    <div className="app-container">
+      <h1 className="app-title">รายการสินค้าของเรา</h1>
 
-      <ProductCard
-        imageUrl="https://picsum.photos/200/151"
-        title="สินค้า B"
-        description="รายละเอียดของสินค้า B"
-        price={200}
-        onAddToCart={() => addToCart("สินค้า B")}
-      />
-
-      <ProductCard
-        imageUrl="https://picsum.photos/200/152"
-        title="สินค้า C"
-        description="รายละเอียดของสินค้า C"
-        price={300}
-        onAddToCart={() => addToCart("สินค้า C")}
-      />
+      <div className="product-grid">
+        {products.map((p) => (
+          <ProductCard
+            key={p.id}
+            imageUrl={p.imageUrl}
+            title={p.title}
+            description={p.description}
+            price={p.price}
+            onAddToCart={() => handleAddToCart(p.title)}
+          />
+        ))}
+      </div>
     </div>
   );
 }

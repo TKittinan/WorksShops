@@ -6,30 +6,24 @@ type ProductCardProps = {
   onAddToCart: () => void;
 };
 
-function ProductCard(props: ProductCardProps) {
+const ProductCard: React.FC<ProductCardProps> = ({
+  imageUrl,
+  title,
+  description,
+  price,
+  onAddToCart,
+}) => {
   return (
-    <div className="border rounded-lg shadow p-4 w-72 bg-white">
-
-      <img
-        src={props.imageUrl}
-        alt={props.title}
-        className="w-full h-40 object-cover rounded"
-      />
-
-      <h2 className="text-lg font-bold mt-2">{props.title}</h2>
-
-      <p className="text-sm text-gray-600">{props.description}</p>
-
-      <p className="text-blue-600 font-semibold mt-2">${props.price}</p>
-
-      <button
-        onClick={props.onAddToCart}
-        className="bg-blue-500 text-white px-3 py-2 rounded mt-3 hover:bg-blue-600" // ✅ ลบ D ออก
-      >
+    <div className="product-card">
+      <img src={imageUrl} alt={title} className="product-image" />
+      <h2 className="product-title">{title}</h2>
+      <p className="product-description">{description}</p>
+      <p className="product-price">${price.toFixed(2)}</p>
+      <button onClick={onAddToCart} className="add-to-cart-btn">
         Add to Cart
       </button>
     </div>
   );
-}
+};
 
 export default ProductCard;
