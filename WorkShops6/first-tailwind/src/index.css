@@ -1,7 +1,8 @@
-@import "tailwindcss/preflight";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-@import "tailwindcss";
+@taiwlwindcss base;
+@tailwindcss components;
+@tailwindcss utilities;
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

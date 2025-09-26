@@ -1,50 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 
-const Navbar: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+const Navbar : React.FC = () => {
+    const [Open, setOpen] = useState(false);
+    return(
+        <nav className="bg-white fixed top-0 left-0 z-50 w-full shadow-md">
+            <div className="items-center flex justify-between px-4 py-3">
+                <div className="text-blue-950 font-bold text-2xl">MyBoard.com</div>
+                <div className="hidden md:flex space-x-6 ">
+                <a href="#" className="text-blue-950 hover:text-indigo-400 px-3 text-black text-md py-2 font-medium">Home</a>
+                <a href="#" className="text-blue-950 hover:text-indigo-400 px-3 text-black text-md py-2 font-medium">About</a>
+                <a href="#" className="text-blue-950 hover:text-indigo-400 px-3 text-black text-md py-2 font-medium">Services</a>
+                <a href="#" className="text-blue-950 hover:text-indigo-400 px-3 text-black text-md py-2 font-medium">Contact</a>
+                </div>
 
-  const navItems = ["Home", "About", "Services", "Contact"];
+                <div className="md:hidden">
+                <button
+                    onClick={() => setOpen(!Open)}
+                    className="focus:outline-none text-blue-950 hover:text-indigo-400 px-3 text-black text-md py-2 font-medium">
+                    ☰
+                </button>
+                </div>
 
-  return (
-    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      <div className="flex items-center justify-between px-5 py-3">
-        <h1 className="text-2xl font-extrabold text-red-800">MyWebsite</h1>
-
-        <nav className="hidden md:flex gap-6">
-          {navItems.map((item) => (
-            <a
-              key={item}
-              href="#"
-              className="text-black font-medium text-md px-3 py-2 hover:text-blue-500"
-            >
-              {item}
-            </a>
-          ))}
+                {Open && (
+                <div className="md:hidden bg-white px-4 py-2 space-y-2 right-4 top-16 absolute shadow-md">
+                    <a href="#" className="block text-blue-950 hover:text-indigo-400 px-3 text-black text-md py-2 font-medium">Home</a>
+                    <a href="#" className="block text-blue-950 hover:text-indigo-400 px-3 text-black text-md py-2 font-medium">About</a>
+                    <a href="#" className="block text-blue-950 hover:text-indigo-400 px-3 text-black text-md py-2 font-medium">Services</a>
+                    <a href="#" className="block text-blue-950 hover:text-indigo-400 px-3 text-black text-md py-2 font-medium">Contact</a>
+                </div>)}
+            </div>
         </nav>
-        <button
-          onClick={() => setMenuOpen((prev) => !prev)}
-          className="md:hidden px-3 py-2 text-md font-medium text-black hover:text-blue-500 focus:outline-none"
-        >
-          ☰
-        </button>
-      </div>
-
-      {/* Mobile Dropdown */}
-      {menuOpen && (
-        <div className="absolute top-16 right-5 bg-white shadow-md md:hidden px-5 py-3 space-y-2 rounded-lg">
-          {navItems.map((item) => (
-            <a
-              key={item}
-              href="#"
-              className="block text-black font-medium text-md px-3 py-2 hover:text-blue-500 rounded-md"
-            >
-              {item}
-            </a>
-          ))}
-        </div>
-      )}
-    </header>
-  );
-};
-
+    )};
 export default Navbar;
