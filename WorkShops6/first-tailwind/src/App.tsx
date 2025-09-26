@@ -82,7 +82,7 @@ export default App;
 
 
 
-///////////////////// 6.2
+
 // import React from "react";
 // import Navbar from "./component/Navbar";
 // import './App.css';
