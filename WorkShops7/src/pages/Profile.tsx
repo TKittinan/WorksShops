@@ -1,21 +1,9 @@
-import {
-  Avatar,
-  Badge,
-  Card,
-  Container,
-  Flex,
-  Grid,
-  Heading,
-  Separator,
-  Text,
-  Link
-} from '@radix-ui/themes'
+import { Avatar, Badge, Card, Container, Flex, Grid, Heading, Separator, Text, Link } from '@radix-ui/themes'
 import { InstagramLogoIcon, GitHubLogoIcon } from '@radix-ui/react-icons'
 
 export default function Profile() {
   return (
     <Container size="3" className="mx-auto max-w-5xl px-4 py-7">
-      {/* Header */}
       <Card size="3" mb="4">
         <Flex align="center" gap="4">
           <Avatar size="7" radius="full" fallback="KTN" color="blue" />
@@ -26,7 +14,6 @@ export default function Profile() {
         </Flex>
       </Card>
 
-      {/* Content */}
       <Grid columns={{ initial: '1', md: '2' }} gap="4">
         {/* Projects Section */}
         <Card size="3">
@@ -34,7 +21,6 @@ export default function Profile() {
           <Separator my="2" />
 
           <Flex direction="column" gap="4">
-            {/* Project 1 */}
             <Card size="2" variant="classic">
               <Heading size="4" mb="1">Smart Water Vending Machine</Heading>
               <Text>
@@ -50,7 +36,6 @@ export default function Profile() {
               </Flex>
             </Card>
 
-            {/* Project 2 */}
             <Card size="2" variant="classic">
               <Heading size="4" mb="1">BaiTong TicketMajor</Heading>
               <Text>
@@ -66,7 +51,6 @@ export default function Profile() {
               </Flex>
             </Card>
 
-            {/* Project 3 */}
             <Card size="2" variant="classic">
               <Heading size="4" mb="1">Stock Analyzer Dashboard</Heading>
               <Text>
@@ -83,7 +67,6 @@ export default function Profile() {
           </Flex>
         </Card>
 
-        {/* Education Section */}
         <Card size="3">
           <Heading size="5" mb="2">Education</Heading>
           <Text weight="medium"><b>มหาวิทยาลัยธุรกิจบัณฑิตย์ คณะวิศวกรรมศาสตร์</b></Text>
@@ -107,7 +90,6 @@ export default function Profile() {
             </Link>
           </Flex>
 
-          {/* GitHub */}
           <Flex align="center" gap="2">
             <GitHubLogoIcon color="black" width="20" height="20" />
             <Link
