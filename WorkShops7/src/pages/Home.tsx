@@ -12,7 +12,6 @@ export default function Home() {
 
   return (
     <Container size="3" className="mx-auto max-w-5xl px-4 py-7">
-      {/* HERO */}
       <Box mb="5">
         <Heading size="8" mb="2">Welcome</Heading>
         <Text>

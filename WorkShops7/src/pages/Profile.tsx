@@ -15,7 +15,6 @@ export default function Profile() {
       </Card>
 
       <Grid columns={{ initial: '1', md: '2' }} gap="4">
-        {/* Projects Section */}
         <Card size="3">
           <Heading size="5" mb="3">My Project</Heading>
           <Separator my="2" />
